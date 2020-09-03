@@ -9,6 +9,10 @@ package javafiguras;
  *
  * @author andre
  */
-public class Rectangulo {
+public class Rectangulo extends OperacionesFiguras{
+
+    public Rectangulo(float[] ladosFigura, float perimetro, float area) {
+        super(ladosFigura, perimetro, area);
+    }
     
 }
