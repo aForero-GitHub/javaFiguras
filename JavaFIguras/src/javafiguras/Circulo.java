@@ -13,8 +13,8 @@ public class Circulo extends OperacionesFiguras{
     
     private float radio;
     
-    public Circulo(float[] ladosFigura, float perimetro, float area) {
-        super(ladosFigura, perimetro, area);
+    public Circulo(float[] ladosFigura) {
+        super(ladosFigura);
     }
     
 }

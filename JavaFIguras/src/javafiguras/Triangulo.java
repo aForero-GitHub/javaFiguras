@@ -11,8 +11,8 @@ package javafiguras;
  */
 public class Triangulo extends OperacionesFiguras{
 
-    public Triangulo(float[] ladosFigura, float perimetro, float area) {
-        super(ladosFigura, perimetro, area);
+    public Triangulo(float[] ladosFigura) {
+        super(ladosFigura);
     }
     
 }

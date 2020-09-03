@@ -14,18 +14,20 @@ public class OperacionesFiguras {
     private float perimetro;
     private float area;
 
-    public OperacionesFiguras(float[] ladosFigura, float perimetro, float area) {
+    public OperacionesFiguras(float[] ladosFigura) {
         this.ladosFigura = ladosFigura;
-        this.perimetro = perimetro;
-        this.area = area;
     }
     
-    private float perimetroFiguras(){
+    public float perimetroFiguras(){
         
         for(int contador = 0;contador<ladosFigura.length;contador++){
             perimetro+=ladosFigura[contador];
         }
         return perimetro;
+    }
+    
+    private float areaFiguras() {
+        return 0;
     }
     
     private void imprimirResultado(){
@@ -40,23 +42,4 @@ public class OperacionesFiguras {
     public void setLadosFigura(float[] ladosFigura) {
         this.ladosFigura = ladosFigura;
     }
-
-    public float getPerimetro() {
-        return perimetro;
-    }
-
-    public void setPerimetro(float perimetro) {
-        this.perimetro = perimetro;
-    }
-
-    public float getArea() {
-        return area;
-    }
-
-    public void setArea(float area) {
-        this.area = area;
-    }
-    
-    
-    
 }
