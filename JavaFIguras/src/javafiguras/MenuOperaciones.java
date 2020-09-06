@@ -8,24 +8,28 @@ package javafiguras;
 import java.util.Scanner;
 
 /**
- *
- * @author andre
+ * @author Andres Forero
+ * @version: 1.0.0
+ * @since 03/09/2020
  */
 public class MenuOperaciones {
 
-    public static void main(String[] args) {
+    private double lados[] = new double[2];
+    private double radio;
+    private int opcion;
+    int n = 1;// referencia del lado a ingresar en rectangulo y triangulo 
 
+    public MenuOperaciones() {
+    }
+
+    public void menuPrincipal() {
+        
         Scanner leerOpcion = new Scanner(System.in);
         Scanner leerDimensionLado = new Scanner(System.in);
-        double lados[] = null;
-        int tamanio = 0;
-        double radio = 0;
-        int opcion = 0;
 
         Cuadrado cuadrado = new Cuadrado(lados);
         Rectangulo rectangulo = new Rectangulo(lados);
         Triangulo triangulo = new Triangulo(lados);
-        Circulo circulo = new Circulo(lados);
 
         System.out.println("De que figura desea conoser AREA y PERIMETRO: "
                 + "\n(1.) Cuadrado"
@@ -37,28 +41,58 @@ public class MenuOperaciones {
         opcion = leerOpcion.nextInt();
 
         switch (opcion) {
+            
             case 1:
+                
                 //Cuadrado
-                tamanio = 1;
-                for (int i = 0; i < tamanio; i++) {
+                for (int i = 0; i < lados.length; i++) {
                     System.out.println("Ingrese la medida de los lados del cuadrado: ");
-                    lados[i] = leerDimensionLado.nextFloat();
+                    lados[i] = leerDimensionLado.nextDouble();
                 }
-                System.out.println("El Perimetro del cuadrado es de: " + cuadrado.perimetroFiguras());
+                cuadrado.imprimirResultado();
+
                 break;
+
             case 2:
+                
                 //Rectangulo
-                System.out.println("El Perimetro del rectangulo es de: " + rectangulo.perimetroFiguras());
+                for (int i = 0; i < lados.length; i++) {
+                    System.out.println("Ingrese la medida " + n++ + " del rectangulo: ");
+                    lados[i] = leerDimensionLado.nextDouble();
+                }
+
+                rectangulo.imprimirResultado();
+                
                 break;
+
             case 3:
+                
                 //Triangulo
-                System.out.println("El Perimetro del triangulo es de: " + triangulo.perimetroFiguras());
+                 for (int i = 0; i < lados.length; i++) {
+                    System.out.println("Ingrese la medida " + n++ + " del rectangulo: ");
+                    lados[i] = leerDimensionLado.nextDouble();
+                }
+                triangulo.imprimirResultado();
+                
                 break;
+
             case 4:
+                
                 //Circulo
+                System.out.println("Ingrese el radio del circulo: ");
+                radio = leerDimensionLado.nextDouble();
+
+                //PREGUNTAR-----------------------------------------------------
+                Circulo circulo = new Circulo(radio);
+                circulo.imprimirResultado();
+
                 break;
+
             default:
+                
                 System.out.println("Opcion no valida");
+                
         }
     }
+
 }

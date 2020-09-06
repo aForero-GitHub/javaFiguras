@@ -6,15 +6,43 @@
 package javafiguras;
 
 /**
- *
- * @author andre
+ * @author Andres Forero
+ * @version: 1.0.0
+ * @since 03/09/2020
  */
+
 public class Circulo extends OperacionesFiguras{
     
-    private float radio;
+    public double radio;
     
-    public Circulo(double[] ladosFigura) {
-        super(ladosFigura);
+    //PI es una constante 
+    private final double pi = 3.14159265359;
+    
+    public Circulo(double radio) {
+        this.radio = radio;
+    }
+
+    @Override
+    public double perimetroFiguras(){
+        
+        perimetro = 2*pi*radio;
+        
+        return perimetro;
     }
     
+    @Override
+    public double areaFiguras() {
+        
+        area = pi*Math.pow(radio, 2);
+        
+        return area;
+    }
+    
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
 }
