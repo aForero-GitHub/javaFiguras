@@ -9,16 +9,16 @@ package javafiguras;
  *
  * @author Andres Forero
  */
-public class OperacionesFiguras {
-    private float ladosFigura[];
-    private float perimetro;
-    private float area;
+public abstract class OperacionesFiguras {
+    private double ladosFigura[];
+    private double perimetro;
+    private double area;
 
-    public OperacionesFiguras(float[] ladosFigura) {
+    public OperacionesFiguras(double[] ladosFigura) {
         this.ladosFigura = ladosFigura;
     }
     
-    public float perimetroFiguras(){
+    public double perimetroFiguras(){
         
         for(int contador = 0;contador<ladosFigura.length;contador++){
             perimetro+=ladosFigura[contador];
@@ -26,7 +26,7 @@ public class OperacionesFiguras {
         return perimetro;
     }
     
-    private float areaFiguras() {
+    private double areaFiguras() {
         return 0;
     }
     
@@ -35,11 +35,11 @@ public class OperacionesFiguras {
         System.out.println("El Area es de: " + area);
     }
     
-    public float[] getLadosFigura() {
+    public double[] getLadosFigura() {
         return ladosFigura;
     }
 
-    public void setLadosFigura(float[] ladosFigura) {
+    public void setLadosFigura(double[] ladosFigura) {
         this.ladosFigura = ladosFigura;
     }
 }

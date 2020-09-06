@@ -11,7 +11,7 @@ package javafiguras;
  */
 public class Cuadrado extends OperacionesFiguras{
 
-    public Cuadrado(float[] ladosFigura) {
+    public Cuadrado(double[] ladosFigura) {
         super(ladosFigura);
     }
     
