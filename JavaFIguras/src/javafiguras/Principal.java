@@ -6,8 +6,9 @@
 package javafiguras;
 
 /**
+ * Clase ce inico (por donde arranca el programa)
  * @author Andres Forero
- * @version: 1.0.0
+ * @version: 2.0.0
  * @since 03/09/2020
  */
 
@@ -19,7 +20,7 @@ public class Principal {
         // TODO code application logic here
         MenuOperaciones menu = new MenuOperaciones();
         
-        /* en el metodo MenuPrincipal dela clase MenuPrincipal 
+        /* en el metodo MenuPrincipal de la clase MenuPrincipal 
         se encuentra toda la logica del menu.*/
         
         menu.menuPrincipal();   

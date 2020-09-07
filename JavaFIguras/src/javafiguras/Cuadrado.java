@@ -6,30 +6,39 @@
 package javafiguras;
 
 /**
+ * Clase encargada de calcular el area y perimetro de los CUADRADOS
  * @author Andres Forero
- * @version: 1.0.0
+ * @version: 1.1.1
  * @since 03/09/2020
  */
 
 public class Cuadrado extends OperacionesFiguras{
 
+    /**
+     * 
+     * @param ladosFigura vector para los lados de la figura
+     */
     public Cuadrado(double[] ladosFigura) {
         super(ladosFigura);
     }
     
-    /*para calcular el perimetro de un cuadrado se toma uno de 
-    sus lados y se multiplica por 4 */
+    /**
+     * Metodo especializado para calcula para calcular el perimetro de un cuadrado, 
+     * se toma uno de sus lados y se multiplica por 4
+     * @return perimetro de un cuadrado
+     */
     
     @Override
     public double perimetroFiguras(){
-        for(int contador = 0;contador<ladosFigura.length;contador++){
-            perimetro =ladosFigura[contador]*4;
-        }
+        perimetro =ladosFigura[0]*4;
         return perimetro;
     }
     
-    /*Para calcular el area de un cuadrado se toma uno de sus lados y 
-    se multiplica por 2 */
+    /**
+     * Metodo especializado para calcular el area de un cuadrado, se toma uno de 
+     * sus lados y se multiplica por 2
+     * @return area de un cuadrado
+     */
     @Override
     public double areaFiguras() {
         for(int contador = 0;contador<ladosFigura.length;contador++){

@@ -8,21 +8,49 @@ package javafiguras;
 import java.util.Scanner;
 
 /**
+ * Esta clase contiene toda la logica correspondiente al menu de opciones, a demas de 
+ * capturar las variables ingresadas por el usuario para hacer los calculos correspondientes
  * @author Andres Forero
- * @version: 1.0.0
+ * @version: 2.0.1
  * @since 03/09/2020
  */
 public class MenuOperaciones {
-
+    
+    /**
+     * vector para enviar los lados capturados a la clase correspondiente
+     */
     private double lados[] = new double[2];
+    
+    /**
+     * capturar el radio del circulo que se quiere calcular
+     */
     private double radio;
+    
+    /**
+     * seleccion de las opciones del menu SWITCH
+     */
     private int opcion;
+    
+    /**
+     * Validar si se desea calcular el area y perimetro de otra figura
+     * S/s = SI
+     * N/n = NO
+     */
     private String opcion2;
-    int n = 1;// referencia del lado a ingresar en rectangulo y triangulo 
-
+    
+    /**
+     * referencia para indicar al usuario el lado que esta ingresando en 
+     * los calculos de rectangulo y triangulo 
+     */
+    int n = 1;
+    
     public MenuOperaciones() {
     }
 
+    /**
+     * Este medoto se encarga de mostrar el menu de opciones y recibir las variables 
+     * ingresadas por los usuarios para realizar los calculos necesarios.
+     */
     public void menuPrincipal() {
 
         Scanner leerOpcion = new Scanner(System.in);
@@ -96,7 +124,7 @@ public class MenuOperaciones {
                     System.out.println("Opcion no valida");
 
             }
-            
+            //S/s = si N/n = no
             System.out.println("¿Quieres calcular otra figura? S/s N/n");
             
             opcion2 = leerOpcion2.nextLine();

@@ -6,17 +6,26 @@
 package javafiguras;
 
 /**
+ * Clase encargada de calcular perimetro de RECTANGULO 
  * @author Andres Forero
- * @version: 1.0.0
+ * @version: 1.1.1
  * @since 03/09/2020
  */
 
 public class Rectangulo extends OperacionesFiguras{
 
+    /**
+     * 
+     * @param ladosFigura vector para los lados de la figura
+     */
     public Rectangulo(double[] ladosFigura) {
         super(ladosFigura);
     }
     
+    /**
+     * Metodo especializado para calcular el perimetro de un rectangulo
+     * @return perimetro del rectangulo
+     */
     @Override
     public double perimetroFiguras(){
         

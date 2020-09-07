@@ -6,22 +6,36 @@
 package javafiguras;
 
 /**
+ * Clase encargada de calcular el perimetro y area de CIRCULO
  * @author Andres Forero
- * @version: 1.0.0
+ * @version: 1.1.1
  * @since 03/09/2020
  */
 
 public class Circulo extends OperacionesFiguras{
     
+    /**
+     * Radio del circulo
+     */
     public double radio;
     
-    //PI es una constante 
+    /**
+     * PI es una constante
+     */
     private final double pi = 3.14159265359;
     
+    /**
+     * 
+     * @param radio radio del circulo
+     */
     public Circulo(double radio) {
         this.radio = radio;
     }
 
+    /**
+     *Metodo especializado para calcular el perimetro de un circulo
+     * @return perimetro de un circulo
+     */
     @Override
     public double perimetroFiguras(){
         
@@ -30,6 +44,10 @@ public class Circulo extends OperacionesFiguras{
         return perimetro;
     }
     
+    /**
+     * Metodo especializado para calcular el area de un circulo
+     * @return area de un circulo
+     */
     @Override
     public double areaFiguras() {
         

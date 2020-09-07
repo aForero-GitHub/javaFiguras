@@ -6,17 +6,27 @@
 package javafiguras;
 
 /**
+ * Clase encargada de calcular el area y perimetos de TRIANGULO
  * @author Andres Forero
- * @version: 1.0.0
+ * @version: 1.1.1
  * @since 03/09/2020
  */
 
 public class Triangulo extends OperacionesFiguras{
 
+    /**
+     * 
+     * @param ladosFigura vector para los lados de la figura
+     */
     public Triangulo(double[] ladosFigura) {
         super(ladosFigura);
     }
     
+    /**
+     * 
+     * Metodo especializado para calcular el perimetro de un triangulo rectangulo
+     * @return perimetro del triangulo
+     */
     @Override
     public double perimetroFiguras(){
         
@@ -27,6 +37,10 @@ public class Triangulo extends OperacionesFiguras{
         return perimetro;
     }
     
+    /**
+     * Metodo especializado para calcular el area de un triangulo rectangulo
+     * @return area de un triangulo
+     */
     @Override
     public double areaFiguras() {
         
