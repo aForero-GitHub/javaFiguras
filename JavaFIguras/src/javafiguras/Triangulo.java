@@ -23,7 +23,7 @@ public class Triangulo extends OperacionesFiguras{
         for(int contador = 0;contador<ladosFigura.length;contador++){
             perimetro+=ladosFigura[contador];
         }
-        perimetro = 2*perimetro;
+        perimetro = 2*ladosFigura[0]+ladosFigura[1];
         return perimetro;
     }
     
