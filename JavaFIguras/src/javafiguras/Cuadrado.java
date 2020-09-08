@@ -8,7 +8,7 @@ package javafiguras;
 /**
  * Clase encargada de calcular el area y perimetro de los CUADRADOS
  * @author Andres Forero
- * @version: 1.1.1
+ * @version: 1.1.2
  * @since 03/09/2020
  */
 
