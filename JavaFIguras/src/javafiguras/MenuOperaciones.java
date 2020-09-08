@@ -57,10 +57,6 @@ public class MenuOperaciones {
         Scanner leerOpcion2 = new Scanner(System.in);
         Scanner leerDimensionLado = new Scanner(System.in);
 
-        Cuadrado cuadrado = new Cuadrado(lados);
-        Rectangulo rectangulo = new Rectangulo(lados);
-        Triangulo triangulo = new Triangulo(lados);
-
         do {
             System.out.println("De que figura desea conoser AREA y PERIMETRO: "
                     + "\n(1.) Cuadrado"
@@ -80,6 +76,7 @@ public class MenuOperaciones {
                         System.out.println("Ingrese la medida de los lados del cuadrado: ");
                         lados[i] = leerDimensionLado.nextDouble();
                     }
+                    Cuadrado cuadrado = new Cuadrado(lados);
                     cuadrado.imprimirResultado();
 
                     break;
@@ -91,7 +88,7 @@ public class MenuOperaciones {
                         System.out.println("Ingrese la medida " + n++ + " del rectangulo: ");
                         lados[i] = leerDimensionLado.nextDouble();
                     }
-
+                    Rectangulo rectangulo = new Rectangulo(lados);
                     rectangulo.imprimirResultado();
 
                     break;
@@ -103,6 +100,7 @@ public class MenuOperaciones {
                         System.out.println("Ingrese la medida " + n++ + " del triangulo: ");
                         lados[i] = leerDimensionLado.nextDouble();
                     }
+                    Triangulo triangulo = new Triangulo(lados);
                     triangulo.imprimirResultado();
 
                     break;

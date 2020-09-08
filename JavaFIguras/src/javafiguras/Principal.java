@@ -6,7 +6,7 @@
 package javafiguras;
 
 /**
- * Clase ce inico (por donde arranca el programa)
+ * Clase de inico (por donde arranca el programa)
  * @author Andres Forero
  * @version: 2.0.0
  * @since 03/09/2020
