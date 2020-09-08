@@ -41,9 +41,7 @@ public class Cuadrado extends OperacionesFiguras{
      */
     @Override
     public double areaFiguras() {
-        for(int contador = 0;contador<ladosFigura.length;contador++){
-            area=2*ladosFigura[contador];
-        }
+        area=2*ladosFigura[0];
         return area;
     }
       

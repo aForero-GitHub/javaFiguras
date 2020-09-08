@@ -72,10 +72,9 @@ public class MenuOperaciones {
                 case 1:
 
                     //Cuadrado
-                    for (int i = 0; i < lados.length; i++) {
-                        System.out.println("Ingrese la medida de los lados del cuadrado: ");
-                        lados[i] = leerDimensionLado.nextDouble();
-                    }
+                    System.out.println("Ingrese la medida de los lados del cuadrado: ");
+                    lados[0] = leerDimensionLado.nextDouble();
+                        
                     Cuadrado cuadrado = new Cuadrado(lados);
                     cuadrado.imprimirResultado();
 
@@ -110,8 +109,7 @@ public class MenuOperaciones {
                     //Circulo
                     System.out.println("Ingrese el radio del circulo: ");
                     radio = leerDimensionLado.nextDouble();
-
-                    //PREGUNTAR-----------------------------------------------------
+                    
                     Circulo circulo = new Circulo(radio);
                     circulo.imprimirResultado();
 
