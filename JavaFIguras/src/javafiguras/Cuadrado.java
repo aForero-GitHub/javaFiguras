@@ -37,7 +37,7 @@ public class Cuadrado extends OperacionesFiguras{
     /**
      * Metodo especializado para calcular el area de un cuadrado, se toma uno de 
      * sus lados y se multiplica por 2
-     * @return area de un cuadrado
+     * @return area de un cuadrado.
      */
     @Override
     public double areaFiguras() {
