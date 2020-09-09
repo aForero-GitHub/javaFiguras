@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Esta clase contiene toda la logica correspondiente al menu de opciones, a demas de 
  * capturar las variables ingresadas por el usuario para hacer los calculos correspondientes
  * @author Andres Forero
- * @version: 2.0.1
+ * @version: 2.0.2
  * @since 03/09/2020
  */
 public class MenuOperaciones {
@@ -76,7 +76,9 @@ public class MenuOperaciones {
                     lados[0] = leerDimensionLado.nextDouble();
                         
                     Cuadrado cuadrado = new Cuadrado(lados);
-                    cuadrado.imprimirResultado();
+                    cuadrado.calcularPerimetroFiguras();
+                    cuadrado.calcularAreaFiguras();
+                    cuadrado.imprimirAreaPerimetro();
 
                     break;
 
@@ -88,7 +90,9 @@ public class MenuOperaciones {
                         lados[i] = leerDimensionLado.nextDouble();
                     }
                     Rectangulo rectangulo = new Rectangulo(lados);
-                    rectangulo.imprimirResultado();
+                    rectangulo.calcularPerimetroFiguras();
+                    rectangulo.calcularAreaFiguras();
+                    rectangulo.imprimirAreaPerimetro();
 
                     break;
 
@@ -100,7 +104,9 @@ public class MenuOperaciones {
                         lados[i] = leerDimensionLado.nextDouble();
                     }
                     Triangulo triangulo = new Triangulo(lados);
-                    triangulo.imprimirResultado();
+                    triangulo.calcularPerimetroFiguras();
+                    triangulo.calcularAreaFiguras();
+                    triangulo.imprimirAreaPerimetro();
 
                     break;
 
@@ -111,7 +117,9 @@ public class MenuOperaciones {
                     radio = leerDimensionLado.nextDouble();
                     
                     Circulo circulo = new Circulo(radio);
-                    circulo.imprimirResultado();
+                    circulo.calcularPerimetroFiguras();
+                    circulo.calcularAreaFiguras();
+                    circulo.imprimirAreaPerimetro();
 
                     break;
 

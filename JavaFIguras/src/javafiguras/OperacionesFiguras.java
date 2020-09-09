@@ -10,11 +10,11 @@ package javafiguras;
  * esta clase ABSTRACTA es la clase padre con los metodos genericos para el area,
  * perimetro e impresion de los resultados
  * @author Andres Forero
- * @version: 1.1.1
- * @since 03/09/2020
+ * @version: 2.0.0
+ * @since 08/09/2020
  */
 
-public abstract class OperacionesFiguras {
+public abstract class OperacionesFiguras implements AreaPerimetroFiguras{
     /**
      * Vector para los lados de las figuras
      */
@@ -28,12 +28,12 @@ public abstract class OperacionesFiguras {
     /**
      * variable que almacena el resultado del calculo deL Area (B*H)
      */
-    public double area = 1;
-   
-   /**
-    * 
-    * @param ladosFigura 
-    */ 
+    public double area;
+
+    /**
+     * 
+     * @param ladosFigura
+     */
     public OperacionesFiguras(double[] ladosFigura) {
         this.ladosFigura = ladosFigura;
     }
@@ -43,40 +43,14 @@ public abstract class OperacionesFiguras {
      */
     public OperacionesFiguras(){
     }
-    
-    /**
-     * metodo general para calcular el perimetro de una figura (L+L+L...)
-     * @return perimetro de las figuras
-     */
-    public double perimetroFiguras(){
-        
-        for(int contador = 0;contador<ladosFigura.length;contador++){
-            perimetro+=ladosFigura[contador];
-        }
-        
-        return perimetro;
-    }
-    
-    /**
-     * metodo general para calcular el area de una figura (B*H)
-     * @return area de las figuras
-     */
-    public double areaFiguras() {
-        
-        for(int contador = 0;contador<ladosFigura.length;contador++){
-            area=area*ladosFigura[contador];
-        }
-        
-        return area;
-    }
-    
+     
     /**
      * imptimir el resultado de las operaciones anteriores
      */
-    public void imprimirResultado(){
-        System.out.println("El Perimetro es de: " + perimetroFiguras()+"\n");
+    public void imprimirAreaPerimetro(){
+        System.out.println("El Perimetro es de: " + getPerimetro()+"\n");
         
-        System.out.println("El Area es de: " + areaFiguras()+"\n");
+        System.out.println("El Area es de: " + getArea()+"\n");
     }
     
     public double[] getLadosFigura() {
@@ -85,5 +59,21 @@ public abstract class OperacionesFiguras {
 
     public void setLadosFigura(double[] ladosFigura) {
         this.ladosFigura = ladosFigura;
+    }
+    
+    public double getPerimetro() {
+        return perimetro;
+    }
+
+    public void setPerimetro(double perimetro) {
+        this.perimetro = perimetro;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
     }
 }

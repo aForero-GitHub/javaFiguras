@@ -29,9 +29,8 @@ public class Cuadrado extends OperacionesFiguras{
      */
     
     @Override
-    public double perimetroFiguras(){
-        perimetro =ladosFigura[0]*4;
-        return perimetro;
+    public void calcularPerimetroFiguras(){
+        setPerimetro(getLadosFigura()[0]*4);
     }
     
     /**
@@ -40,9 +39,8 @@ public class Cuadrado extends OperacionesFiguras{
      * @return area de un cuadrado.
      */
     @Override
-    public double areaFiguras() {
-        area=2*ladosFigura[0];
-        return area;
+    public void calcularAreaFiguras() {
+        setArea(getLadosFigura()[0]*2);
     }
-      
+    
 }

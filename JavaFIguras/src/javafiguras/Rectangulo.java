@@ -8,8 +8,8 @@ package javafiguras;
 /**
  * Clase encargada de calcular perimetro de RECTANGULO 
  * @author Andres Forero
- * @version: 1.1.1
- * @since 03/09/2020
+ * @version: 1.2.1
+ * @since 08/09/2020
  */
 
 public class Rectangulo extends OperacionesFiguras{
@@ -24,15 +24,21 @@ public class Rectangulo extends OperacionesFiguras{
     
     /**
      * Metodo especializado para calcular el perimetro de un rectangulo
-     * @return perimetro del rectangulo
      */
     @Override
-    public double perimetroFiguras(){
+    public void calcularPerimetroFiguras(){
         
-        for(int contador = 0;contador<ladosFigura.length;contador++){
-            perimetro+=ladosFigura[contador];
+        for(int contador = 0;contador<getLadosFigura().length;contador++){
+            perimetro+=getLadosFigura()[contador];
         }
-        perimetro = 2*perimetro;
-        return perimetro;
+        setPerimetro(2*perimetro);
+    }
+
+    /**
+     * Metodo especializado para calcular el Area de un rectangulo
+     */
+    @Override
+    public void calcularAreaFiguras() {
+        setArea(getLadosFigura()[0]*getLadosFigura()[1]);
     }
 }

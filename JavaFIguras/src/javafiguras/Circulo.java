@@ -8,8 +8,8 @@ package javafiguras;
 /**
  * Clase encargada de calcular el perimetro y area de CIRCULO
  * @author Andres Forero
- * @version: 1.1.1
- * @since 03/09/2020
+ * @version: 1.1.2
+ * @since 08/09/2020
  */
 
 public class Circulo extends OperacionesFiguras{
@@ -37,11 +37,9 @@ public class Circulo extends OperacionesFiguras{
      * @return perimetro de un circulo
      */
     @Override
-    public double perimetroFiguras(){
+    public void calcularPerimetroFiguras(){
         
-        perimetro = 2*pi*radio;
-        
-        return perimetro;
+        setPerimetro(2*pi*getRadio());
     }
     
     /**
@@ -49,11 +47,9 @@ public class Circulo extends OperacionesFiguras{
      * @return area de un circulo
      */
     @Override
-    public double areaFiguras() {
+    public void calcularAreaFiguras() {
         
-        area = pi*Math.pow(radio, 2);
-        
-        return area;
+        setArea(pi*Math.pow(getRadio(), 2));
     }
     
     public double getRadio() {
