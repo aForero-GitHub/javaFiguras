@@ -16,6 +16,9 @@ import java.util.Scanner;
  */
 public class MenuOperaciones {
     
+    
+    private AreaPerimetroFiguras figuras[] = new AreaPerimetroFiguras[4];
+    
     /**
      * vector para enviar los lados capturados a la clase correspondiente
      */
@@ -53,9 +56,13 @@ public class MenuOperaciones {
      */
     public void menuPrincipal() {
 
+        
+        
         Scanner leerOpcion = new Scanner(System.in);
         Scanner leerOpcion2 = new Scanner(System.in);
         Scanner leerDimensionLado = new Scanner(System.in);
+        
+        
 
         do {
             System.out.println("De que figura desea conoser AREA y PERIMETRO: "
@@ -74,11 +81,12 @@ public class MenuOperaciones {
                     //Cuadrado
                     System.out.println("Ingrese la medida de los lados del cuadrado: ");
                     lados[0] = leerDimensionLado.nextDouble();
-                        
-                    Cuadrado cuadrado = new Cuadrado(lados);
-                    cuadrado.calcularPerimetroFiguras();
-                    cuadrado.calcularAreaFiguras();
-                    cuadrado.imprimirAreaPerimetro();
+                    
+                    figuras[0]=new Cuadrado(lados);
+                    figuras[0].calcularPerimetroFiguras();
+                    figuras[0].calcularAreaFiguras();
+                    OperacionesFiguras opFiguras = (OperacionesFiguras) figuras[0];
+                    opFiguras.imprimirAreaPerimetro();
 
                     break;
 
@@ -89,10 +97,12 @@ public class MenuOperaciones {
                         System.out.println("Ingrese la medida " + n++ + " del rectangulo: ");
                         lados[i] = leerDimensionLado.nextDouble();
                     }
-                    Rectangulo rectangulo = new Rectangulo(lados);
-                    rectangulo.calcularPerimetroFiguras();
-                    rectangulo.calcularAreaFiguras();
-                    rectangulo.imprimirAreaPerimetro();
+                    
+                    figuras[1]=new Rectangulo(lados);
+                    figuras[1].calcularPerimetroFiguras();
+                    figuras[1].calcularAreaFiguras();
+                    OperacionesFiguras opFiguras1 = (OperacionesFiguras) figuras[1];
+                    opFiguras1.imprimirAreaPerimetro();
 
                     break;
 
@@ -103,10 +113,12 @@ public class MenuOperaciones {
                         System.out.println("Ingrese la medida " + n++ + " del triangulo: ");
                         lados[i] = leerDimensionLado.nextDouble();
                     }
-                    Triangulo triangulo = new Triangulo(lados);
-                    triangulo.calcularPerimetroFiguras();
-                    triangulo.calcularAreaFiguras();
-                    triangulo.imprimirAreaPerimetro();
+                    
+                    figuras[2]=new Triangulo(lados);
+                    figuras[2].calcularPerimetroFiguras();
+                    figuras[2].calcularAreaFiguras();
+                    OperacionesFiguras opFiguras2 = (OperacionesFiguras) figuras[2];
+                    opFiguras2.imprimirAreaPerimetro();
 
                     break;
 
@@ -116,10 +128,11 @@ public class MenuOperaciones {
                     System.out.println("Ingrese el radio del circulo: ");
                     radio = leerDimensionLado.nextDouble();
                     
-                    Circulo circulo = new Circulo(radio);
-                    circulo.calcularPerimetroFiguras();
-                    circulo.calcularAreaFiguras();
-                    circulo.imprimirAreaPerimetro();
+                    figuras[3]=new Cuadrado(lados);
+                    figuras[3].calcularPerimetroFiguras();
+                    figuras[3].calcularAreaFiguras();
+                    OperacionesFiguras opFiguras3 = (OperacionesFiguras) figuras[3];
+                    opFiguras3.imprimirAreaPerimetro();
 
                     break;
 

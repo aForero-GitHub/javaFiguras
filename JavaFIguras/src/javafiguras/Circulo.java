@@ -34,7 +34,6 @@ public class Circulo extends OperacionesFiguras{
 
     /**
      *Metodo especializado para calcular el perimetro de un circulo
-     * @return perimetro de un circulo
      */
     @Override
     public void calcularPerimetroFiguras(){
@@ -44,7 +43,6 @@ public class Circulo extends OperacionesFiguras{
     
     /**
      * Metodo especializado para calcular el area de un circulo
-     * @return area de un circulo
      */
     @Override
     public void calcularAreaFiguras() {
